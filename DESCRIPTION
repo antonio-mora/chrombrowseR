@@ -1,0 +1,14 @@
+Package: chrombrowseR
+Type: Package
+Title: Chromatin Browser
+Version: 0.1
+Date: 2015-10-30
+Author: Antonio Mora
+Maintainer: Antonio Mora <antonimo@ibv.uio.no>
+Description: chrombrowseR is an R package to load, compare, annotate and visualize chromatin interaction data from chromosome conformation capture, FISH, and similar technologies.
+License: GPL (>= 2)
+Depends: R (>= 3.2.1)
+Imports:
+    igraph,
+    GenomicRanges
+
