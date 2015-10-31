@@ -11,7 +11,7 @@ range_comparison(df_a, df_b, operation, info)
 
   \item{operation}{A string. Either "intersection", "union" or "difference". The intersection corresponds to those regions in the first dataframe that overlap at least 1 bp with regions in the second dataframe. Default value: "intersection".}
 
-  \item{info}{A string. Either "on" or "off". The default value is "on" and corresponds to display of information regarding the performed set operation.
+  \item{info}{A string. Either "on" or "off". The default value is "on" and corresponds to display of information regarding the performed set operation.}
 }
 \value{
 A dataframe with the intersection, union or difference between the input data frames \code{df_a} and \code{df_b}.

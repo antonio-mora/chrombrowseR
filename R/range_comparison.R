@@ -40,6 +40,17 @@ range_comparison <- function(df_a, df_b, operation="intersection", info="on") {
 		result <- merged_df[,c(1,2,3)]
 	}
 
+#	if (operation=="plot") {
+#		draw_venn <- function(bed1, bed2, name1, name2) {
+#			library(VennDiagram)
+#			bed1_GR <- GRanges( seqnames=bed1$chr, range=IRanges(start=bed1$start, end=bed1$end, names=paste(bed1$chr,bed1$start,sep=":")),strand="*" )
+#			bed2_GR <- GRanges( seqnames=bed2$chr, range=IRanges(start=bed2$start, end=bed2$end, names=paste(bed2$chr,bed2$start,sep=":")),strand="*" )
+#			inters_indexes <- bed1_GR %over% bed2_GR
+#			inters <- length(bed1_GR[inters_indexes])
+#			draw.pairwise.venn( length(bed1_GR), length(bed2_GR), inters, category=c(name1,name2))
+#		}
+#	}
+
 	result
 }
 
