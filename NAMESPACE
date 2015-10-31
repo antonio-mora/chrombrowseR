@@ -1,4 +1,5 @@
 import(igraph)
 import(GenomicRanges)
-export(range_comparison, full_range_comparison)
+export(range_comparison)
+export(full_range_comparison)
 
