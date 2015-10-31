@@ -4,7 +4,7 @@ range_comparison <- function(df_a, df_b, operation="intersection", info="on") {
 	df_b_gr <- with(df_b, GRanges(chr, IRanges(start, end, names=1:dim(df_b)[1])))
 
 	if (operation=="intersection") {
-		if (info=="on") { cat("Ranges of the first dataframe that overlap with ranges of the second dataframe:") }
+		if (info=="on") { cat("Ranges of the first dataframe that overlap with ranges of the second dataframe:\n") }
 
 		overlaps <- findOverlaps(df_a_gr, df_b_gr)
 		match_hit <- data.frame(seqnames(df_a_gr)[queryHits(overlaps)],
@@ -17,7 +17,7 @@ range_comparison <- function(df_a, df_b, operation="intersection", info="on") {
 	}
 
 	if (operation=="difference") {
-		if (info=="on") { cat("Ranges of the first dataframe that do not overlap with ranges of the second dataframe:") }
+		if (info=="on") { cat("Ranges of the first dataframe that do not overlap with ranges of the second dataframe:\n") }
 
 		overlaps <- findOverlaps(df_a_gr, df_b_gr)
 		match_hit <- data.frame(seqnames(df_a_gr)[queryHits(overlaps)],
@@ -30,7 +30,7 @@ range_comparison <- function(df_a, df_b, operation="intersection", info="on") {
 	}
 
 	if (operation=="union") {
-		if (info=="on") { cat("Merged ranges:") }
+		if (info=="on") { cat("Merged ranges:\n") }
 
 		merged_gr <- reduce(c(df_a_gr, df_b_gr))
 		merged_df <- data.frame(seqnames(merged_gr), ranges(merged_gr))
