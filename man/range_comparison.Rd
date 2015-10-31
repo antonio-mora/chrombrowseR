@@ -2,16 +2,14 @@
 \alias{range_comparison}
 \title{Intersection, Union and Difference of two data frames of genomic ranges}
 \usage{
-range_comparison(df_a, df_b, operation, ncols)
+range_comparison(df_a, df_b, operation)
 }
 \arguments{
   \item{df_a}{A dataframe of a bed file.}
 
   \item{df_b}{A dataframe of a bed file.}
 
-  \item{operation}{A string. Either "intersection", "union" or "difference". Default value: "intersection".}
-
-  \item{ncols}{An integer. Number of columns to display in the output data frame. Currently, only accepting three columns: "chr", "start" and "end" (default value: 3).}
+  \item{operation}{A string. Either "intersection", "union" or "difference". The intersection corresponds to those regions in the first dataframe that overlap at least 1 bp with regions in the second dataframe. Default value: "intersection".}
 }
 \value{
 A dataframe with the intersection, union or difference between the input data frames \code{df_a} and \code{df_b}.
